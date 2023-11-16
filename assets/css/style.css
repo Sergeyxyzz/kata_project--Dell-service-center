@@ -1,0 +1,78 @@
+@import url(./screens/mobile/mobile-style.css) (max-width: 783px);
+@import url(./screens/table/table-style.css) (min-width: 784px) and (max-width: 1119px);
+@import url(./screens/desktop/desktop.css) (min-width: 1120px);
+@font-face {
+    font-weight: 100; /* Соответствует значению normal */
+    font-family: TTLakes-Light;
+    src: url("../fonts/TTLakes/TTLakes-Light.ttf");
+}
+  
+  @font-face {
+    font-family: TTLakes-Bold;
+    src: url("../fonts/TTLakes/TTLakes-Bold.ttf");
+}
+  
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    font-family: "TTLakes-Light";
+}
+
+h1 {
+    font-family: "TTLakes-Bold";
+}
+
+h2 {
+    color: #1B1C21;
+
+font-family: "TTLakes-Light";
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 150% */
+letter-spacing: -0.2px;
+}
+
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+.main__nav__links-item a {      
+    text-decoration: none;
+    padding: 10px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    text-align: center;
+    color: #7E7E82;
+    min-width: 16.6%;
+}
+
+.item__active {
+    border-radius: 6px;
+    border: 2px solid #B8FFEC;
+    background: #FFF;
+    padding: 10px;
+}
+
+.main-title__title {
+    color: #1B1C21;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 40px; /* 142.857% */
+    letter-spacing: -0.6px;
+}
+
+fieldset {
+    border: none;
+}
+
