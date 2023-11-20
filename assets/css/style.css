@@ -104,6 +104,17 @@ button {
 	cursor: pointer;
 }
 
+.button__read-more {
+	display: flex;
+	align-items:center;
+	justify-content: center;
+	padding: 10px 10px 10px 20px;
+}
+
+.image-expand {
+	padding-right: 15px;
+}
+
 .main {
 	background: #f8f8f8;
 	height: 100%;
@@ -223,6 +234,13 @@ button {
 		padding-right: 0px !important;
 	}
 
+	.button__read-more {
+		display: flex;
+		align-items:center;
+		justify-content: center;
+		padding: 10px 10px 10px 0px !important;
+	}
+
 	.main .main-content__aside {
 		display: flex;
 		flex-direction: row;
@@ -310,6 +328,4 @@ button {
 			min-height: 307px;
 		}
 	}
-
-
 }
