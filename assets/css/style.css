@@ -93,7 +93,7 @@ fieldset {
 			padding-right: 16px;
 		}
 
-		@media (width < 1119px) {
+		@media (width > 767px) {
 			.header-nav__button-burger::after {
 				content: '';
 				display: inline-flex;
@@ -106,7 +106,7 @@ fieldset {
 		}
 	}
 }
-@media (width >= 1120px) {
+@media (width >= 1119px) {
 	.header {
 		display: none;
 	}
@@ -163,7 +163,7 @@ button {
 		display: flex;
 		align-items: center;
 
-		@media (width >= 1120px) {
+		@media (width >= 1119px) {
 			min-width: 100%;
 			display: flex;
 			flex-flow: row;
@@ -207,7 +207,7 @@ button {
 		bottom: 20px;
 		padding-bottom: 8px;
 
-		@media (width >= 1120px) {
+		@media (width >= 1119px) {
 			padding-top: 20px;
 			flex-wrap: wrap;
 		}
@@ -233,7 +233,7 @@ button {
 			flex-wrap: wrap;
 			white-space: nowrap;
 
-			@media (width >= 1120px) {
+			@media (width >= 1119px) {
 				padding-right: 30px;
 			}
 		}
@@ -320,7 +320,7 @@ button {
 			}
 		}
 
-		@media (width > 1120px) {
+		@media (width >= 1119px) {
 			min-height: 325px;
 			background: #f8f8f8;
 		}
