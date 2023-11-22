@@ -57,7 +57,6 @@ fieldset {
 .header {
 	background: #ffffff;
 	min-width: 100vw;
-
 	border-bottom: 1px solid #d9fff5;
 	display: flex;
 	justify-content: space-between;
@@ -93,6 +92,37 @@ fieldset {
 		.header-nav__button-status {
 			padding-right: 16px;
 		}
+
+		@media (width < 1119px) {
+			.header-nav__button-burger::after {
+				content: '';
+				display: inline-flex;
+				position: relative;
+				padding-right: 16px;
+				border-right: 2px solid #eaeaea;
+				height: 40px;
+				cursor: auto;
+			}
+		}
+	}
+}
+@media (width >= 1120px) {
+	.header {
+		display: none;
+	}
+}
+
+@media (width < 1119px) {
+	.title__icons-desktop {
+		display: none;
+	}
+}
+@media (width < 767px) {
+	.title__icons-desktop,
+	.header-nav__button-call,
+	.header-nav__button-chat,
+	.header-nav__button-profile {
+		display: none;
 	}
 }
 
@@ -107,9 +137,16 @@ button {
 
 .button__read-more {
 	display: flex;
-	align-items:center;
+	align-items: center;
 	justify-content: center;
 	padding: 10px 10px 10px 20px;
+
+	@media (width < 767px) {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 10px 10px 10px 0px !important;
+	}
 }
 
 .image-expand {
@@ -125,6 +162,32 @@ button {
 		max-width: 304px;
 		display: flex;
 		align-items: center;
+
+		@media (width >= 1120px) {
+			min-width: 100%;
+			display: flex;
+			flex-flow: row;
+			align-items: center;
+
+			.main-title__title {
+				text-align: start;
+				width: 90%;
+				align-self: center;
+			}
+
+			.title__icons-desktop {
+				width: 100%;
+				display: flex;
+				justify-content: end;
+				.title__button {
+					justify-content: space-around;
+					width: 200px;
+					display: flex;
+					align-items: center;
+					padding-right: 10px;
+				}
+			}
+		}
 	}
 
 	.title::before {
@@ -143,6 +206,11 @@ button {
 		right: 30px;
 		bottom: 20px;
 		padding-bottom: 8px;
+
+		@media (width >= 1120px) {
+			padding-top: 20px;
+			flex-wrap: wrap;
+		}
 
 		.nav-list__link {
 			text-decoration: none;
@@ -164,6 +232,10 @@ button {
 			display: flex;
 			flex-wrap: wrap;
 			white-space: nowrap;
+
+			@media (width >= 1120px) {
+				padding-right: 30px;
+			}
 		}
 
 		.nav-list__link--active {
@@ -180,6 +252,10 @@ button {
 		display: flex;
 		flex-direction: row;
 		margin-top: -30px;
+
+		@media (width < 767px) {
+			flex-direction: column;
+		}
 
 		.main-content__description {
 			height: auto;
@@ -198,135 +274,55 @@ button {
 			display: flex;
 			flex-direction: row;
 			justify-content: start;
+
+			@media (width < 767px) {
+				display: flex;
+				flex-direction: row;
+				justify-content: start;
+				padding-left: 16px;
+				padding-right: 8px;
+			}
 		}
 
 		.main-content__image {
 			padding-right: 20px;
 			padding-top: 14px;
 			width: auto;
+
+			@media (width < 767px) {
+				min-width: 90%;
+				padding-right: 0px !important;
+			}
+
+			@media (width > 1120px) {
+				min-width: 531px;
+				min-height: 307px;
+			}
 		}
-	}
-}
-
-/* moblie screen */
-@media (max-width: 767px) {
-	.title__icons-desktop,
-	.header-nav__button-call,
-	.header-nav__button-chat,
-	.header-nav__button-profile {
-		display: none;
-	}
-
-	.main .main-content {
-		flex-direction: column;
 
 		.cuttedText {
-			display: flex;
-			max-width: 100%;
-			height: 90px;
-			overflow: hidden;
-			white-space: wrap;
-			text-overflow: ellipsis;
-		}
-	}
-
-	.main .main-content__image {
-		min-width: 90%;
-		padding-right: 0px !important;
-	}
-
-	.button__read-more {
-		display: flex;
-		align-items:center;
-		justify-content: center;
-		padding: 10px 10px 10px 0px !important;
-	}
-
-	.main .main-content__aside {
-		display: flex;
-		flex-direction: row;
-		justify-content: start;
-		padding-left: 16px;
-		padding-right: 8px;
-	}
-}
-
-/* tablet screen */
-@media (min-width: 768px) {
-	.title__icons-desktop {
-		display: none;
-	}
-
-	.main .main-content .cuttedText {
-		display: flex;
-		max-width: 100%;
-		height: 90px;
-		overflow: hidden;
-		white-space: wrap;
-		text-overflow: ellipsis;
-	}
-
-	.header-nav__button-burger::after {
-		content: '';
-		display: inline-flex;
-		position: relative;
-		padding-right: 16px;
-		border-right: 2px solid #eaeaea;
-		height: 40px;
-		cursor: auto;
-	}
-}
-
-/* desktop screen */
-@media (min-width: 1120px) {
-	.header {
-		display: none;
-	}
-
-	.title {
-		min-width: 100%;
-		display: flex;
-		flex-flow: row;
-		align-items: center;
-
-		.main-title__title {
-			text-align: start;
-			width: 90%;
-			align-self: center;
-		}
-
-		.title__icons-desktop {
-			width: 100%;
-			display: flex;
-			justify-content: end;
-			.title__button {
-				justify-content: space-around;
-				width: 200px;
+			@media (width < 767px) {
 				display: flex;
-				align-items: center;
-				padding-right: 10px;
+				max-width: 100%;
+				height: 90px;
+				overflow: hidden;
+				white-space: wrap;
+				text-overflow: ellipsis;
+			}
+
+			@media (width < 1119px) {
+				display: flex;
+				max-width: 100%;
+				height: 90px;
+				overflow: hidden;
+				white-space: wrap;
+				text-overflow: ellipsis;
 			}
 		}
-	}
 
-	.main {
-		.nav-list {
-			padding-top: 20px;
-			flex-wrap: wrap;
-
-			.nav-list__item {
-				padding-right: 30px;
-			}
-		}
-
-		.main-content__text-wrapper {
+		@media (width > 1120px) {
 			min-height: 325px;
 			background: #f8f8f8;
-		}
-
-		.main-content__image {
-			min-width: 531px;
-			min-height: 307px;
 		}
 	}
 }
