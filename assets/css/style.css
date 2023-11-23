@@ -42,7 +42,7 @@ button {
 	cursor: pointer;
 }
 
-.main-title__title {
+.main__title {
 	color: #1b1c21;
 	font-size: 28px;
 	font-weight: 700;
@@ -54,6 +54,10 @@ fieldset {
 	border: none;
 }
 
+.header div {
+	padding-right: 16px;
+}
+
 .header {
 	background: #ffffff;
 	min-width: 100vw;
@@ -63,23 +67,23 @@ fieldset {
 	align-items: center;
 
 	.nav {
+		.wrap-delimiter {
+			display: flex;
+		}
+
 		min-width: 100%;
 		justify-content: space-between;
 		display: flex;
 		align-items: center;
 		padding: 16px 0px;
 
-		.header-nav__button {
-			padding-right: 16px;
-		}
-
-		.header-nav__button-burger {
+		.nav__button-burger {
 			position: relative;
-			top: -5px;
+			top: 10px;
 			padding-left: 16px;
 		}
 
-		.header-nav__button-reapair::before {
+		.nav__button-reapair::before {
 			content: '';
 			display: inline-flex;
 			position: relative;
@@ -89,12 +93,12 @@ fieldset {
 			cursor: auto;
 		}
 
-		.header-nav__button-status {
+		.nav__button-status {
 			padding-right: 16px;
 		}
 
 		@media (width > 767px) {
-			.header-nav__button-burger::after {
+			.nav__button-burger::after {
 				content: '';
 				display: inline-flex;
 				position: relative;
@@ -119,9 +123,9 @@ fieldset {
 }
 @media (width < 767px) {
 	.title__icons-desktop,
-	.header-nav__button-call,
-	.header-nav__button-chat,
-	.header-nav__button-profile {
+	.nav__button-call,
+	.nav__button-chat,
+	.nav__button-profile {
 		display: none;
 	}
 }
@@ -140,13 +144,6 @@ button {
 	align-items: center;
 	justify-content: center;
 	padding: 10px 10px 10px 20px;
-
-	@media (width < 767px) {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		padding: 10px 10px 10px 0px !important;
-	}
 }
 
 .image-expand {
@@ -169,7 +166,7 @@ button {
 			flex-flow: row;
 			align-items: center;
 
-			.main-title__title {
+			.main__title {
 				text-align: start;
 				width: 90%;
 				align-self: center;
@@ -179,7 +176,8 @@ button {
 				width: 100%;
 				display: flex;
 				justify-content: end;
-				.title__button {
+				.title__button-repair,
+				.title__button-status {
 					justify-content: space-around;
 					width: 200px;
 					display: flex;
@@ -267,21 +265,6 @@ button {
 			font-weight: 400;
 			line-height: 18px; /* 128.571% */
 			letter-spacing: 0.2px;
-		}
-
-		.main-content__aside {
-			margin-left: 10px;
-			display: flex;
-			flex-direction: row;
-			justify-content: start;
-
-			@media (width < 767px) {
-				display: flex;
-				flex-direction: row;
-				justify-content: start;
-				padding-left: 16px;
-				padding-right: 8px;
-			}
 		}
 
 		.main-content__image {

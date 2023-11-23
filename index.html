@@ -18,67 +18,74 @@
 		<!-- кнопки хедар -->
 		<header class="header">
 			<nav class="nav">
-				<div class="header-nav__wrapper">
-					<button
-						class="header-nav__button header-nav__button-burger"
-					>
-						<img
-							src="./assets/icons/burger.svg"
-							alt="Burger menu button"
-							title="Burger menu button"
-						/>
-					</button>
-					<button class="header-nav__button header-nav__button-logo">
-						<a href="index.html"
-							><img
-								src="./assets/icons/Group.svg"
-								alt="Logo"
-								title="Logo"
-						/></a>
-					</button>
+				<div class="wrap-delimiter">
+					<div class="nav__button-burger">
+						<button>
+							<img
+								src="./assets/icons/burger.svg"
+								alt="Burger menu button"
+								title="Burger menu button"
+							/>
+						</button>
+					</div>
+					<div class="nav__button-logo">
+						<button>
+							<a href="index.html"
+								><img
+									src="./assets/icons/Group.svg"
+									alt="Logo"
+									title="Logo"
+							/></a>
+						</button>
+					</div>
 				</div>
-				<div class="header-nav__wrapper">
-					<button class="header-nav__button header-nav__button-call">
-						<img
-							src="./assets/icons/call.svg"
-							alt="call"
-							title="call"
-						/>
-					</button>
-					<button class="header-nav__button header-nav__button-chat">
-						<img
-							src="./assets/icons/chat.svg"
-							alt="chat"
-							title="chat"
-						/>
-					</button>
-					<button
-						class="header-nav__button header-nav__button-profile"
-					>
-						<img
-							src="./assets/icons/profile.svg"
-							alt="profile"
-							title="profile"
-						/>
-					</button>
-					<button
-						class="header-nav__button header-nav__button-reapair"
-					>
-						<img
-							src="./assets/icons/repair.svg"
-							alt="Repair"
-							title="Repair"
-						/>
-					</button>
-					<button
-						class="header-nav__button header-nav__button-status"
-					>
-						<img
-							src="./assets/icons/checkstatus.svg"
-							alt="Check-status"
-							title="Check-status"
-						/>
-					</button>
+
+				<div class="wrap-delimiter">
+					<div class="nav__button-call">
+						<button>
+							<img
+								src="./assets/icons/call.svg"
+								alt="call"
+								title="call"
+							/>
+						</button>
+					</div>
+					<div class="nav__button-chat">
+						<button>
+							<img
+								src="./assets/icons/chat.svg"
+								alt="chat"
+								title="chat"
+							/>
+						</button>
+					</div>
+					<div class="nav__button-profile">
+						<button>
+							<img
+								src="./assets/icons/profile.svg"
+								alt="profile"
+								title="profile"
+							/>
+						</button>
+					</div>
+					<div class="nav__button-reapair">
+						<button>
+							<img
+								src="./assets/icons/repair.svg"
+								alt="Repair"
+								title="Repair"
+							/>
+						</button>
+					</div>
+					<div class="nav__button-status">
+						<button>
+							<img
+								src="./assets/icons/checkstatus.svg"
+								alt="Check-status"
+								title="Check-status"
+							/>
+						</button>
+					</div>
 				</div>
 			</nav>
 		</header>
@@ -86,32 +93,34 @@
 		<main class="main">
 			<!-- УСУГИ И СЕРВИСЫ (h1) -->
 			<div class="title">
-				<h1 class="main-title__item main-title__title">
-					Услуги и сервисы
-				</h1>
+				<h1 class="main__title">Услуги и сервисы</h1>
 
 				<!-- иконки для десктопа (display:none; в разрешение < 1120px) -->
 				<div class="title__icons-desktop">
-					<button class="title__button title__button-repair">
-						<p class="title__description">
-							<b>Оставить заявку</b>
-						</p>
-						<img
-							src="./assets/icons/repair.svg"
-							alt="Repair"
-							title="Repair"
-						/>
-					</button>
-					<button class="title__button title__button-status">
-						<p class="main__description">
-							<b>Статус ремонта</b>
-						</p>
-						<img
-							src="./assets/icons/checkstatus.svg"
-							alt="Check-status"
-							title="Check-status"
-						/>
-					</button>
+					<div>
+						<button class="title__button-repair">
+							<p class="title__description">
+								<b>Оставить заявку</b>
+							</p>
+							<img
+								src="./assets/icons/repair.svg"
+								alt="Repair"
+								title="Repair"
+							/>
+						</button>
+					</div>
+					<div>
+						<button class="title__button-status">
+							<p class="main__description">
+								<b>Статус ремонта</b>
+							</p>
+							<img
+								src="./assets/icons/checkstatus.svg"
+								alt="Check-status"
+								title="Check-status"
+							/>
+						</button>
+					</div>
 				</div>
 			</div>
 
@@ -156,16 +165,14 @@
 						нам обращаются по рекомендациям и, в свою очередь,
 						советуют нас родным и близким.
 					</p>
-					<aside class="main-content__aside">
-						<button class="main-content__button button__read-more">
-							<img
-								class="image-expand"
-								src="./assets/icons/expand.svg"
-								alt="expand"
-								title="expand"
-							/><b>Читать далее</b>
-						</button>
-					</aside>
+					<button class="button__read-more">
+						<img
+							class="image-expand"
+							src="./assets/icons/expand.svg"
+							alt="expand"
+							title="expand"
+						/><b>Читать далее</b>
+					</button>
 				</div>
 				<img
 					class="main-content__image"
