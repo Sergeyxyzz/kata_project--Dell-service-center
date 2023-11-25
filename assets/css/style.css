@@ -77,13 +77,13 @@ fieldset {
 		align-items: center;
 		padding: 16px 0px;
 
-		.nav__button-burger {
+		.button__burger {
 			position: relative;
 			top: 10px;
 			padding-left: 16px;
 		}
 
-		.nav__button-reapair::before {
+		.button__repair::before {
 			content: '';
 			display: inline-flex;
 			position: relative;
@@ -93,12 +93,8 @@ fieldset {
 			cursor: auto;
 		}
 
-		.nav__button-status {
-			padding-right: 16px;
-		}
-
 		@media (width > 767px) {
-			.nav__button-burger::after {
+			.button__burger::after {
 				content: '';
 				display: inline-flex;
 				position: relative;
@@ -123,9 +119,9 @@ fieldset {
 }
 @media (width < 767px) {
 	.title__icons-desktop,
-	.nav__button-call,
-	.nav__button-chat,
-	.nav__button-profile {
+	.button__call,
+	.button__chat,
+	.button__profile {
 		display: none;
 	}
 }
@@ -176,8 +172,8 @@ button {
 				width: 100%;
 				display: flex;
 				justify-content: end;
-				.title__button-repair,
-				.title__button-status {
+				.button__repair,
+				.button__status {
 					justify-content: space-around;
 					width: 200px;
 					display: flex;
