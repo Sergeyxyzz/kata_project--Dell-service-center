@@ -1,3 +1,4 @@
+/* базовые правила правила */
 @font-face {
 	font-weight: 100; /* Соответствует значению normal */
 	font-family: TTLakes-Light;
@@ -52,16 +53,18 @@ button {
 	cursor: pointer;
 }
 
+fieldset {
+	border: none;
+}
+
+/* конец базовых правил */
+
 .main__title {
 	color: #1b1c21;
 	font-size: 28px;
 	font-weight: 700;
 	line-height: 40px; /* 142.857% */
 	letter-spacing: -0.6px;
-}
-
-fieldset {
-	border: none;
 }
 
 .header div {
@@ -73,7 +76,6 @@ fieldset {
 }
 .nav--position {
 	position: relative;
-
 	padding-bottom: 32px;
 }
 .header {
@@ -125,6 +127,8 @@ fieldset {
 		}
 	}
 }
+
+/* отключение элементов под дисплеи */
 @media (width >= 1119px) {
 	.header {
 		display: none;
@@ -142,6 +146,7 @@ fieldset {
 		display: none;
 	}
 }
+/* конец блока отключения */
 
 button {
 	padding: 0;
@@ -320,14 +325,74 @@ button {
 	}
 }
 
-/* мобильное боковое меню */
+/* блок анимация лого мобильного меню */
+@keyframes logo-animation {
+	from {
+		opacity: 0.2;
+	}
 
+	to {
+		opacity: 0.8;
+		background: rgba(255, 62, 121, 0.1);
+	}
+}
+
+@keyframes hover-animation {
+	from {
+		transform: scale(1);
+		background: rgba(255, 62, 121, 0.1);
+	}
+
+	to {
+		transform: scale(0.8);
+		background: rgb(255, 62, 121);
+	}
+}
+
+.logo--animate {
+	animation: logo-animation 1s ease-in-out infinite;
+	animation-direction: alternate;
+	&:hover {
+		animation-name: hover-animation;
+		opacity: 1;
+		box-shadow: 10px 10px 10px rgb(172, 172, 172),
+			10px -10px 10px rgb(172, 172, 172),
+			-10px 10px 10px rgb(172, 172, 172),
+			-10px -10px 10px rgb(172, 172, 172);
+		transition: 0.1s ease-in;
+		border: 1px solid #ff6492;
+		border-radius: 100%;
+		background: rgba(255, 255, 255, 0.2);
+	}
+}
+/* конец блока анимации лого */
+
+/* мобильное боковое меню */
 .mobile-menu {
+	.button__call,
+	.button__chat,
+	.button__profile,
+	.button__search,
+	.button__burger-close {
+		opacity: 0.7;
+		animation-name: button-sly;
+		transition: 0.1s ease-in-out;
+		&:hover {
+			transform: scale(1.1);
+			opacity: 1;
+		}
+	}
+
+	.button__logo {
+		border-radius: 50%;
+		position: relative;
+	}
+
 	min-height: 100%;
 	max-width: 320px;
 	max-height: 1024px;
 	padding-bottom: 20px;
-	background: #fff;
+	background: #ffffff;
 	box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2),
 		-2px 0px 4px 0px rgba(69, 79, 126, 0.02);
 
@@ -444,3 +509,4 @@ button {
 		}
 	}
 }
+/* конец мобильного бокового меню */
