@@ -58,6 +58,10 @@ fieldset {
 	padding-right: 16px;
 }
 
+.header div:last-child {
+	padding-right: 8px !important;
+}
+
 .header {
 	background: #ffffff;
 	min-width: 100vw;
@@ -305,3 +309,5 @@ button {
 		}
 	}
 }
+
+/* мобильное меню */
