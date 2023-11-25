@@ -1,88 +1,134 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Mobile menu</title>
-</head>
-<body>
-    <main class="mobile-menu">
-        <header class="header">
-			<nav class="nav">
-				<div class="wrap-delimiter">
-					<div class="button">
-						<button class="button__burger">
-							<img
-								src="./assets/icons/burger.svg"
-								alt="Burger menu button"
-								title="Burger menu button"
-							/>
-						</button>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./assets/css/style.css" />
+		<title>Mobile menu</title>
+	</head>
+	<body>
+		<main class="mobile-menu">
+			<header class="header">
+				<nav class="nav">
+					<div class="wrap-delimiter">
+						<div class="button">
+							<button class="button__burger-close">
+								<img
+									src="./assets/icons/burger-close.svg"
+									alt="Burger menu button"
+									title="Burger menu button"
+								/>
+							</button>
+						</div>
+						<div class="button">
+							<button class="button__logo">
+								<a href="index.html"
+									><img
+										src="./assets/icons/Group.svg"
+										alt="Logo"
+										title="Logo"
+								/></a>
+							</button>
+						</div>
 					</div>
-					<div class="button">
-						<button class="button__logo">
-							<a href="index.html"
-								><img
-									src="./assets/icons/Group.svg"
-									alt="Logo"
-									title="Logo"
-							/></a>
-						</button>
+
+					<div class="wrap-delimiter">
+						<div class="button">
+							<button class="button__search">
+								<img
+									src="./assets/icons/search.svg"
+									alt="Search"
+									title="Search"
+								/>
+							</button>
+						</div>
+					</div>
+				</nav>
+			</header>
+			<div class="content">
+				<ul class="nav-list">
+					<li class="nav-list__item">
+						<a
+							href="#"
+							class="nav-list__link nav-list__link--active"
+							>Ремонт техники</a
+						>
+					</li>
+					<li class="nav-list__item">
+						<a href="#" class="nav-list__link">Услуги и сервисы</a>
+					</li>
+					<li class="nav-list__item">
+						<a href="#" class="nav-list__link"
+							>Корпоративным клиентам</a
+						>
+					</li>
+					<li class="nav-list__item">
+						<a href="#" class="nav-list__link">Продавцам техники</a>
+					</li>
+					<li class="nav-list__item">
+						<a href="#" class="nav-list__link">Партнерам</a>
+					</li>
+					<li class="nav-list__item">
+						<a href="#" class="nav-list__link">Прозводителям</a>
+					</li>
+					<li class="nav-list__item">
+						<a href="#" class="nav-list__link"
+							>Наши сервисные центры</a
+						>
+					</li>
+					<li class="nav-list__item">
+						<a href="#" class="nav-list__link">Контакты</a>
+					</li>
+				</ul>
+				<div class="information">
+					<div class="buttons">
+						<div class="button">
+							<button class="button__call">
+								<img
+									src="./assets/icons/call.svg"
+									alt="call"
+									title="call"
+								/>
+							</button>
+						</div>
+						<div class="button">
+							<button class="button__chat">
+								<img
+									src="./assets/icons/chat.svg"
+									alt="chat"
+									title="chat"
+								/>
+							</button>
+						</div>
+						<div class="button">
+							<button class="button__profile">
+								<img
+									src="./assets/icons/profile.svg"
+									alt="profile"
+									title="profile"
+								/>
+							</button>
+						</div>
+					</div>
+					<div class="contacts">
+						<a class="link-email" href="mailto:mail@cps.com"
+							>mail@cps.com</a
+						>
+						<a class="link-phone" href="tel:88008908900"
+							>8 800 890 8900</a
+						>
+					</div>
+					<div class="langs">
+						<ul class="langs-list">
+							<li class="lang-item lang-item--active">
+								<button>RU</button>
+							</li>
+							<li class="lang-item"><button>EN</button></li>
+							<li class="lang-item"><button>CH</button></li>
+						</ul>
 					</div>
 				</div>
-
-				<div class="wrap-delimiter">
-					<div class="button">
-						<button class="button__call">
-							<img
-								src="./assets/icons/call.svg"
-								alt="call"
-								title="call"
-							/>
-						</button>
-					</div>
-					<div class="button">
-						<button class="button__chat">
-							<img
-								src="./assets/icons/chat.svg"
-								alt="chat"
-								title="chat"
-							/>
-						</button>
-					</div>
-					<div class="button">
-						<button class="button__profile">
-							<img
-								src="./assets/icons/profile.svg"
-								alt="profile"
-								title="profile"
-							/>
-						</button>
-					</div>
-					<div class="button">
-						<button class="button__repair">
-							<img
-								src="./assets/icons/repair.svg"
-								alt="Repair"
-								title="Repair"
-							/>
-						</button>
-					</div>
-					<div class="button">
-						<button class="button__status">
-							<img
-								src="./assets/icons/checkstatus.svg"
-								alt="Check-status"
-								title="Check-status"
-							/>
-						</button>
-					</div>
-				</div>
-			</nav>
-		</header>
-
-
-    </main>
-</body>
+			</div>
+		</main>
+	</body>
 </html>
