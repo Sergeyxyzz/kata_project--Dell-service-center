@@ -119,9 +119,9 @@ fieldset {
 }
 @media (width < 767px) {
 	.title__icons-desktop,
-	.button__call,
-	.button__chat,
-	.button__profile {
+	.button:nth-last-of-type(3),
+	.button:nth-last-of-type(4),
+	.button:nth-last-of-type(5) {
 		display: none;
 	}
 }
