@@ -325,6 +325,37 @@ button {
 	}
 }
 
+/* анимации ссылок в бургере в mobile_menu.html */
+.nav--animation-link {
+	.nav-list__item a:hover {
+		position: relative;
+		left: 5px;
+		text-shadow: -5px 5px 4px rgba(0, 0, 0, 0.3);
+		transition: 0.1s ease-in-out;
+		transform: scale(1.5);
+	}
+
+	.nav-list__item a:hover::before {
+		content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAV0lEQVR4nGNgGAVUAKsYGBj+I+FQBioDEQYGhhdIFrxmYGAQp7Yl/mi+2MBAA7BqNKiIBatGg4oYEIYWTCsZqJzxXqJlPLEhE8lho0GDC4SNBs0oYMAFAKhgR7mlDneWAAAAAElFTkSuQmCC);
+		position: relative;
+		float: left;
+		margin-left: -30px;
+	}
+
+	.nav-list__link--active:hover::before {
+		content: url(../icons/highlight-menu.svg) !important;
+		vertical-align: middle;
+		position: relative;
+		margin-left: -10px !important;
+		float: none !important;
+	}
+
+	.nav-list__link--active:hover {
+		text-shadow: none !important;
+	}
+}
+/* конец анимаций ссылок в бургере */
+
 /* блок анимация лого мобильного меню */
 @keyframes logo-animation {
 	from {
