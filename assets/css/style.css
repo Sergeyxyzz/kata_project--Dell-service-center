@@ -326,7 +326,7 @@ button {
 }
 
 /* анимации ссылок в бургере в mobile_menu.html */
-.nav--animation-link {
+.nav--animation {
 	.nav-list__item a:hover {
 		position: relative;
 		left: 5px;
