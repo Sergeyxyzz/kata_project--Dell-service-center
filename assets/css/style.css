@@ -387,8 +387,7 @@ button {
 		animation-name: hover-animation;
 		opacity: 1;
 		box-shadow: 10px 10px 10px rgb(172, 172, 172),
-			10px -10px 10px rgb(172, 172, 172),
-			-10px 10px 10px rgb(172, 172, 172),
+			10px -10px 10px rgb(172, 172, 172), -10px 10px 10px rgb(172, 172, 172),
 			-10px -10px 10px rgb(172, 172, 172);
 		transition: 0.1s ease-in;
 		border: 1px solid #ff6492;
@@ -486,7 +485,7 @@ button {
 			.buttons {
 				display: flex;
 				flex-direction: row;
-
+					
 				.button {
 					padding-right: 16px;
 					padding-bottom: 16px;
