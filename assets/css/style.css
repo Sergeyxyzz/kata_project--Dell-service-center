@@ -1,4 +1,4 @@
-/* базовые правила */
+/* базовые правила*/
 @font-face {
     font-weight: 100; /* Соответствует значению normal */
     font-family: TTLakes-Light;
@@ -75,23 +75,26 @@ fieldset {
         & li {
             padding-right: 24px;
         }
+    }
 
-        & img[alt='Repair'] {
-            display: flex;
-            position: relative;
-            padding-left: 24px;
-            border-left: 2px solid #eaeaea;
-            height: 40px;
-            cursor: auto;
-        }
+    .vertical-line--left::after {
+        content: '';
+        float: left;
+        position: relative;
+        padding-left: 24px;
+        border-left: 2px solid #eaeaea;
+        height: 40px;
+        cursor: auto;
     }
 
     @media (width > 766px) {
-        & img[alt='Burger menu button'] {
-            display: flex;
+        .vertical-line--right::after {
+            content: '';
+            float: right;
             position: relative;
             padding-right: 24px;
             border-right: 2px solid #eaeaea;
+            height: 40px;
             cursor: auto;
         }
     }
