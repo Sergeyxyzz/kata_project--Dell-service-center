@@ -195,39 +195,6 @@ fieldset {
     height: 100%;
     max-width: 100vw;
 
-    .title {
-        max-width: 304px;
-        display: flex;
-        align-items: center;
-
-        @media (width >= 1119px) {
-            min-width: 100%;
-            display: flex;
-            flex-flow: row;
-            align-items: center;
-
-            .main__title {
-                text-align: start;
-                width: 90%;
-                align-self: center;
-            }
-
-            .icons-desktop {
-                width: 100%;
-                display: flex;
-                justify-content: end;
-                .button-repair,
-                .button-status {
-                    justify-content: space-around;
-                    width: 200px;
-                    display: flex;
-                    align-items: center;
-                    padding-right: 10px;
-                }
-            }
-        }
-    }
-
     .nav-list {
         position: relative;
         display: flex;
@@ -273,6 +240,39 @@ fieldset {
             border: 2px solid #b8ffec;
             background: #fff;
             padding: 10px;
+        }
+    }
+
+    .title {
+        max-width: 304px;
+        display: flex;
+        align-items: center;
+
+        @media (width >= 1119px) {
+            min-width: 100%;
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+
+            .main__title {
+                text-align: start;
+                width: 90%;
+                align-self: center;
+            }
+
+            .icons-desktop {
+                width: 100%;
+                display: flex;
+                justify-content: end;
+                .button-repair,
+                .button-status {
+                    justify-content: space-around;
+                    width: 200px;
+                    display: flex;
+                    align-items: center;
+                    padding-right: 10px;
+                }
+            }
         }
     }
 
@@ -528,3 +528,70 @@ fieldset {
     /* конец доб информации aside */
 }
 /* конец бургер меню */
+
+/* slider swiper */
+
+.slider {
+    width: 320px;
+    height: 234px;
+
+    .swiper {
+        width: 240px;
+        height: 218px;
+        padding-right: 40px;
+        padding-left: 20px;
+        display: flex;
+
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        background: linear-gradient(270deg, #f8f8f8 0%, #fff 98.61%);
+    }
+    .header-swiper {
+        background: white;
+        padding-left: 100px;
+        min-width: 320px;
+        justify-content: center;
+        vertical-align: middle;
+        border-top: 1px solid #d9fff5;
+        height: 80px;
+        color: #7e7e82;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 150% */
+        letter-spacing: -0.2px;
+        text-transform: uppercase;
+
+        & h2 {
+            text-align: start;
+        }
+    }
+    .swiper-wrapper {
+        display: inline-flex;
+    }
+
+    .wrap-border {
+        padding: 0 12px;
+        align-items: center;
+        justify-content: space-between;
+        align-items: center;
+        display: inline-flex;
+        border-radius: 6px;
+        border: 1px solid #eaeaea;
+        background: #fff;
+        min-width: 200px;
+        height: 72px;
+    }
+
+    .swiper-pagination {
+        position: relative;
+        margin-bottom: 38px;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: #838385;
+    }
+}
+
+/* end slider */
