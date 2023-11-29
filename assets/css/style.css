@@ -541,6 +541,7 @@ fieldset {
 
     & h2 {
         color: #7e7e82;
+        margin-left: 5px;
     }
 
     .header-title {
@@ -601,10 +602,14 @@ fieldset {
         border-radius: 6px;
         border: 1px solid #eaeaea;
         background: #fff;
-        min-width: 80%;
+        min-width: 90%;
         height: 72px;
     }
-
+    @media (width > 767px) {
+        .wrap-border {
+            min-width: 80%;
+        }
+    }
     .swiper-pagination {
         position: relative;
         margin-bottom: 38px;
@@ -622,7 +627,6 @@ fieldset {
     /* big screen */
     .header-title {
         background: linear-gradient(90deg, #f8f8f8 1.39%, #fff 100%);
-        
     }
 
     @media (width < 1119px) {
@@ -654,7 +658,7 @@ fieldset {
     .slider-big-screen {
         display: flex;
         flex-direction: column;
-       
+
         height: 100%;
         padding-left: 24px;
         background: #f8f8f8;
