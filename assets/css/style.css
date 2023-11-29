@@ -381,9 +381,7 @@ fieldset {
     max-width: 320px;
     padding-bottom: 20px;
     background: #ffffff;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+
 
     .button {
         transition: 0.1s ease-in-out;
