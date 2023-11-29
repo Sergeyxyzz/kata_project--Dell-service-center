@@ -544,18 +544,6 @@ fieldset {
         margin-left: 5px;
     }
 
-    .header-title {
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 24px; /* 150% */
-        letter-spacing: -0.2px;
-        text-transform: uppercase;
-        background: white;
-        min-width: 100%;
-        border-top: 1px solid #d9fff5;
-    }
-
     /* mobile-screen */
     .swiper {
         max-width: 767px;
@@ -576,13 +564,12 @@ fieldset {
 
     .header-swiper {
         background: linear-gradient(270deg, #f8f8f8 0%, #fff 98.61%);
-        width: 100%;
-        justify-content: center;
+        min-width: 100%;
+        justify-content: start;
         vertical-align: middle;
-        min-width: 50%;
         height: 80px;
         padding-left: 80px;
-
+        border-top: 1px solid #d9fff5;
         & h2 {
             position: relative;
             right: 38px;
@@ -627,6 +614,18 @@ fieldset {
     /* big screen */
     .header-title {
         background: linear-gradient(90deg, #f8f8f8 1.39%, #fff 100%);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 150% */
+        letter-spacing: -0.2px;
+        text-transform: uppercase;
+        min-width: 100%;
+        
+    }
+
+    .slider-big-screen {
+        border-top: 1px solid #d9fff5;
     }
 
     @media (width < 1119px) {
