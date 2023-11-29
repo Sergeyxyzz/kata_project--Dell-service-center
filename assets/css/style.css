@@ -379,7 +379,6 @@ fieldset {
     box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2), -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
     min-height: 100vh;
     max-width: 320px;
-    max-height: 100vh;
     padding-bottom: 20px;
     background: #ffffff;
     display: flex;
@@ -504,7 +503,7 @@ fieldset {
         @media (height > 1023px) {
             padding-top: 40px;
         }
-        padding-bottom: 32px;
+        padding-bottom: 16px;
         .lang-item {
             display: inline-block;
             padding-right: 7px;
