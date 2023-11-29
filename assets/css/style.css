@@ -396,7 +396,6 @@ fieldset {
     /* хедар бургера */
     .header-burger {
         display: flex;
-        min-height: 50px;
         max-width: 272px;
         justify-content: space-between;
         border-bottom: none;
