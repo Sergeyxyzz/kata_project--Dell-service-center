@@ -654,7 +654,7 @@ fieldset {
         }
     }
 }
-@media (width > 1119px) {
+@media (width > 1118px) {
     .slider-big-screen {
         display: flex;
         flex-direction: column;
@@ -684,7 +684,7 @@ fieldset {
         }
     }
 }
-@media (width < 767px) {
+@media (width < 768px) {
     .tablet {
         display: none;
     }
