@@ -24,8 +24,7 @@ const swiper = new Swiper('.swiper', {
 const btnShowMore = document.querySelector('.button__show-more'),
     btnCloseMore = document.querySelector('.button__close-more'),
     sliderBigScreen = document.querySelector('.slider-big-screen'),
-    hideTablet = document.querySelectorAll('.hide-tablet'),
-    sliderList = document.querySelector('.slider-list');
+    hideTablet = document.querySelectorAll('.hide-tablet');
 
 hideTablet.forEach((elem) => {
     elem.style.cssText = `display: none;`
@@ -56,6 +55,3 @@ btnCloseMore.addEventListener('click', (e) => {
         })
     }
 })
-
-// const mediaQueryWindow = window.matchMedia('(min-width: 1120px)')
-// const mediaQueryTablet = window.matchMedia('(min-width: 768px)')
