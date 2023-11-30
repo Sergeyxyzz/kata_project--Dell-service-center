@@ -575,7 +575,6 @@ fieldset {
     padding: 0 12px;
     align-items: center;
     justify-content: space-between;
-    align-items: center;
     display: inline-flex;
     border-radius: 6px;
     border: 1px solid #eaeaea;
@@ -616,7 +615,6 @@ fieldset {
 
 /* start tablet-screen */
 .tablet-screen {
-    border-top: 1px solid #d9fff5;
     width: 100%;
     display: flex;
     flex-direction: column;
