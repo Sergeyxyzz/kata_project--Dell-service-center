@@ -23,8 +23,8 @@ const swiper = new Swiper('.swiper', {
 
 const btnShowMore = document.querySelector('.button__show-more'),
     btnCloseMore = document.querySelector('.button__close-more'),
-    sliderBigScreen = document.querySelector('.slider-big-screen'),
-    hideTablet = document.querySelectorAll('.hide-tablet');
+    tabletScreen = document.querySelector('.tablet-screen'),
+    hideTablet = document.querySelectorAll('.hide-tablet')
 
 hideTablet.forEach((elem) => {
     elem.style.cssText = `display: none;`
@@ -34,7 +34,7 @@ btnCloseMore.style.cssText = `display: none;`
 
 btnShowMore.addEventListener('click', (e) => {
     if (e.currentTarget === btnShowMore) {
-        sliderBigScreen.style.cssText = `height: 100%;`
+        tabletScreen.style.cssText = `height: 100%;`
         btnShowMore.style.cssText = `display: none;`
         btnCloseMore.style.cssText = `display: flex;`
 
@@ -46,7 +46,7 @@ btnShowMore.addEventListener('click', (e) => {
 
 btnCloseMore.addEventListener('click', (e) => {
     if (e.currentTarget === btnCloseMore) {
-        sliderBigScreen.style.cssText = `max-height: 322px;`
+        tabletScreen.style.cssText = `max-height: 322px;`
         btnCloseMore.style.cssText = `display: none;`
         btnShowMore.style.cssText = `display: flex;`
 
