@@ -677,6 +677,12 @@ fieldset {
         display: none;
     }
 }
+
+@media (width > 768px) {
+    .hide-not-in-mobile {
+        display: none;
+    }
+}
 @media (width > 1118px) {
     .slider-list {
         .view-tablet {
