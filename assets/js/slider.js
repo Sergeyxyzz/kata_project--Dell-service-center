@@ -1,57 +1,44 @@
-const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
+let pageWidth = document.documentElement.scrollWidth
 
-    // If we need pagination
+const swiper = new Swiper('.swiper', {
     pagination: {
         el: '.swiper-pagination',
-    },
-
-    // Navigation arrows
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-
-    // And if we need scrollbar
-    scrollbar: {
-        el: '.swiper-scrollbar',
-        draggable: false,
+        type: 'bullets',
     },
 })
 
+const resizeWidth = () => {
+    swiper.hostEl.classList.replace('swiper', 'tablet-screen')
+    swiper.slides.forEach((elem) => elem.classList.replace('swiper-slide', 'slider-list__item'))
+    swiper.wrapperEl.classList.replace('swiper-wrapper', 'slider-list')
+}
+
+if (pageWidth > 768) {
+    resizeWidth()
+}
+window.addEventListener('resize', (e) => {
+    if (innerWidth > 768) {
+        resizeWidth()
+    }
+})
+
 const btnShowMore = document.querySelector('.button__show-more'),
-    btnCloseMore = document.querySelector('.button__close-more'),
-    tabletScreen = document.querySelector('.tablet-screen'),
     hideTablet = document.querySelectorAll('.hide-tablet')
 
 hideTablet.forEach((elem) => {
     elem.style.cssText = `display: none;`
 })
 
-btnCloseMore.style.cssText = `display: none;`
+const showSliderContent = () => {
+    hideTablet.forEach((elem) => {
+        if (elem.style.display === 'none') {
+            elem.style.display = 'block'
+            btnShowMore.innerHTML = `<button class="button__read-more button__show-more slider-button--position"><img class="image-expand" src="./assets/icons/expand2.svg" alt="expand" title="expand" /><b>Скрыть все</b></button>`
+        } else if ((elem.style.display = 'block')) {
+            elem.style.display = 'none'
+            btnShowMore.innerHTML = `<button class="button__read-more button__show-more slider-button--position"><img class="image-expand" src="./assets/icons/expand.svg" alt="expand" title="expand" /><b>Показать все</b></button>`
+        }
+    })
+}
 
-btnShowMore.addEventListener('click', (e) => {
-    if (e.currentTarget === btnShowMore) {
-        tabletScreen.style.cssText = `height: 100%;`
-        btnShowMore.style.cssText = `display: none;`
-        btnCloseMore.style.cssText = `display: flex;`
-
-        hideTablet.forEach((elem) => {
-            elem.style.cssText = `display: block;`
-        })
-    }
-})
-
-btnCloseMore.addEventListener('click', (e) => {
-    if (e.currentTarget === btnCloseMore) {
-        tabletScreen.style.cssText = `max-height: 322px;`
-        btnCloseMore.style.cssText = `display: none;`
-        btnShowMore.style.cssText = `display: flex;`
-
-        hideTablet.forEach((elem) => {
-            elem.style.cssText = `display: none;`
-        })
-    }
-})
+btnShowMore.addEventListener('click', showSliderContent)
