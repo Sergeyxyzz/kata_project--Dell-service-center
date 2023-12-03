@@ -669,10 +669,6 @@ fieldset {
 }
 
 @media (width < 768px) {
-    .main-content {
-        display: none;
-    }
-
     .hide-tablet {
         display: none;
     }

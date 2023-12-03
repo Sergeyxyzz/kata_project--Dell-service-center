@@ -15,12 +15,11 @@ const resizeWidth = () => {
 
 if (pageWidth > 768) {
     resizeWidth()
+} else {
+    document.querySelector('.main-content').remove()
+    document.querySelectorAll('.hide-tablet').forEach((elem) => elem.remove())
+    document.querySelectorAll('.view-window-only').forEach((elem) => elem.remove())
 }
-window.addEventListener('resize', (e) => {
-    if (innerWidth > 768) {
-        resizeWidth()
-    }
-})
 
 const btnShowMore = document.querySelector('.button__show-more'),
     hideTablet = document.querySelectorAll('.hide-tablet')
