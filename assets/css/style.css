@@ -548,12 +548,12 @@ fieldset {
 }
 
 .header-tablet {
+    border-top: 1px solid #d9fff5;
     & h2 {
         padding-left: 24px;
         color: #7e7e82;
     }
 }
-
 
 @media (width > 767px) {
     .header-tablet {
@@ -622,7 +622,7 @@ fieldset {
     flex-direction: column;
     min-height: 100%;
     background: #f8f8f8;
-    overflow-x:hidden;
+    overflow-x: hidden;
     .main-content {
         position: relative;
         padding-left: 9px;
@@ -641,8 +641,6 @@ fieldset {
         }
     }
 }
-
-
 
 .button__show-more {
     position: relative;
