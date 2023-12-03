@@ -16,6 +16,13 @@ const resizeWidth = () => {
 if (pageWidth > 768) {
     resizeWidth()
     document.querySelector('.header-mobile').classList.replace('header-mobile', 'header-tablet')
+    window.addEventListener('resize', (e) => {
+        if (innerWidth < 768) {
+            document.querySelectorAll('.wrap-border').forEach((elem) => (elem.style.cssText = `width: 85vw;`))
+        } else {
+            document.querySelectorAll('.wrap-border').forEach((elem) => (elem.style.cssText = `width: 60%;`))
+        }
+    })
 } else {
     document.querySelector('.main-content').remove()
     document.querySelectorAll('.hide-tablet').forEach((elem) => elem.remove())

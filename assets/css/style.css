@@ -546,7 +546,6 @@ fieldset {
         color: #7e7e82;
     }
 }
-
 .header-tablet {
     border-top: 1px solid #d9fff5;
     & h2 {
@@ -663,11 +662,6 @@ fieldset {
     }
 }
 
-@media (width > 768px) {
-    .hide-not-in-mobile {
-        display: none;
-    }
-}
 @media (width > 1118px) {
     .slider-list {
         .view-tablet {
