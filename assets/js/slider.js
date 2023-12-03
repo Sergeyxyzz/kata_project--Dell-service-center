@@ -15,6 +15,7 @@ const resizeWidth = () => {
 
 if (pageWidth > 768) {
     resizeWidth()
+    document.querySelector('.header-mobile').classList.replace('header-mobile', 'header-tablet')
 } else {
     document.querySelector('.main-content').remove()
     document.querySelectorAll('.hide-tablet').forEach((elem) => elem.remove())
@@ -40,4 +41,6 @@ const showSliderContent = () => {
     })
 }
 
-btnShowMore.addEventListener('click', showSliderContent)
+if (pageWidth > 768) {
+    btnShowMore.addEventListener('click', showSliderContent)
+}

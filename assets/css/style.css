@@ -535,8 +535,7 @@ fieldset {
 /* конец бургер меню */
 
 /* START SLIDER */
-
-.header-title {
+.header-mobile {
     background: linear-gradient(270deg, #f8f8f8 0%, #fff 98.61%);
     min-width: 100%;
     justify-content: start;
@@ -548,26 +547,21 @@ fieldset {
     }
 }
 
-@media (width < 768px) {
-    .header-title {
-        height: 80px;
-        padding-left: 80px;
-
-        & h2 {
-            position: relative;
-            right: 38px;
-        }
+.header-tablet {
+    & h2 {
+        padding-left: 24px;
+        color: #7e7e82;
     }
 }
 
+
 @media (width > 767px) {
-    .header-title {
+    .header-tablet {
+        width: 100vw;
         position: relative;
         height: 56px !important;
+        position: relative;
         background: linear-gradient(90deg, #f8f8f8 1.39%, #fff 100%);
-        & h2 {
-            padding-left: 24px;
-        }
     }
 }
 
