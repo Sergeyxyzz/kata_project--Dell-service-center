@@ -45,6 +45,9 @@ const showSliderContent = () => {
     hideTablet.forEach((elem) => {
         if (elem.style.display === 'none') {
             elem.style.display = 'block'
+            if (pageWidth < 1119) {
+                document.querySelectorAll('.view-window-only').forEach(elem => elem.style.display = 'block')
+            }
             btnShowMore.innerHTML = `<button class="button__read-more button__show-more "><img class="image-expand" src="./assets/icons/expand2.svg" alt="expand" title="expand" /><b>Скрыть все</b></button>`
         } else if ((elem.style.display = 'block')) {
             elem.style.display = 'none'
