@@ -16,6 +16,11 @@ const resizeWidth = () => {
 if (pageWidth > 768) {
     resizeWidth()
     document.querySelector('.header-mobile').classList.replace('header-mobile', 'header-tablet')
+    document.querySelectorAll('.slide--anchor-big-view').forEach((elem) => {
+        if (elem.classList.contains('slide--anchor-big-view')) {
+            elem.classList.add('view-window-only')
+        }
+    })
     window.addEventListener('resize', (e) => {
         if (innerWidth < 768) {
             document.querySelectorAll('.wrap-border').forEach((elem) => (elem.style.cssText = `width: 85vw;`))
@@ -25,8 +30,8 @@ if (pageWidth > 768) {
     })
 } else {
     document.querySelector('.main-content').remove()
-    document.querySelectorAll('.hide-tablet').forEach((elem) => elem.remove())
-    document.querySelectorAll('.view-window-only').forEach((elem) => elem.remove())
+    document.querySelectorAll('.hide-tablet').forEach((elem) => elem.classList.remove('hide-tablet'))
+    document.querySelectorAll('.view-window-only').forEach((elem) => elem.classList.remove('view-window-only'))
 }
 
 const btnShowMore = document.querySelector('.button__show-more'),

@@ -656,18 +656,9 @@ fieldset {
     }
 }
 
-@media (width < 768px) {
-    .hide-tablet {
-        display: none;
-    }
-}
 
 @media (width > 1118px) {
     .slider-list {
-        .view-tablet {
-            display: flex;
-        }
-
         .slider-list__item {
             flex: 0 0 22.7%;
         }
