@@ -55,13 +55,13 @@ const showSliderContent = () => {
             if (pageWidth < 1440) {
                 document.querySelectorAll('.view-window-only')[(0, 1)].style.display = 'block'
             }
-            btnShowMore[0].innerHTML = `<button class="button__read-more button__show-more "><img class="image-expand" src="./assets/icons/expand2.svg" alt="expand" title="expand" /><b>Скрыть все</b></button>`
+            btnShowMore[0].innerHTML = `<button class="button__read-more button__show-more "><img class="image-expand" src="./images/expand2.svg" alt="expand" title="expand" /><b>Скрыть все</b></button>`
         } else if ((hideTablet[i].style.display = 'block')) {
             if (pageWidth < 1440) {
                 document.querySelectorAll('.view-window-only')[(0, 1)].style.display = 'none'
             }
             hideTablet[i].style.display = 'none'
-            btnShowMore[0].innerHTML = `<button class="button__read-more button__show-more"><img class="image-expand" src="./assets/icons/expand.svg" alt="expand" title="expand" /><b>Показать все</b></button>`
+            btnShowMore[0].innerHTML = `<button class="button__read-more button__show-more"><img class="image-expand" src="./images/expand.svg" alt="expand" title="expand" /><b>Показать все</b></button>`
         }
     }
 }
@@ -74,13 +74,13 @@ const showSliderContent2 = () => {
             if (pageWidth < 1440) {
                 document.querySelectorAll('.view-window-only')[(2, 3)].style.display = 'block'
             }
-            btnShowMore[1].innerHTML = `<button class="button__read-more button__show-more "><img class="image-expand" src="./assets/icons/expand2.svg" alt="expand" title="expand" /><b>Скрыть все</b></button>`
+            btnShowMore[1].innerHTML = `<button class="button__read-more button__show-more "><img class="image-expand" src="./images/expand2.svg" alt="expand" title="expand" /><b>Скрыть все</b></button>`
         } else if ((hideTablet[i].style.display = 'block')) {
             if (pageWidth < 1440) {
                 document.querySelectorAll('.view-window-only')[(2, 3)].style.display = 'none'
             }
             hideTablet[i].style.display = 'none'
-            btnShowMore[1].innerHTML = `<button class="button__read-more button__show-more"><img class="image-expand" src="./assets/icons/expand.svg" alt="expand" title="expand" /><b>Показать все</b></button>`
+            btnShowMore[1].innerHTML = `<button class="button__read-more button__show-more"><img class="image-expand" src="./images/expand.svg" alt="expand" title="expand" /><b>Показать все</b></button>`
         }
     }
 }
@@ -249,14 +249,14 @@ btnShowMoreText.addEventListener('click', () => {
         cuttedText.style.cssText = `height: 270px;
         overflow: visible;`
         btnShowMoreText.innerHTML = `<button class="button__read-more button__show-more-text">
-            <img class="image-expand img--rotate" src="./assets/icons/expand2.svg" alt="expand" title="expand" /><b>Cвернуть текст</b>
+            <img class="image-expand img--rotate" src="./images/expand2.svg" alt="expand" title="expand" /><b>Cвернуть текст</b>
         </button>`
         switcherContent.style.display = 'block'
     } else if ((switcherContent.style.display = 'block')) {
         cuttedText.style.cssText = `height: 90px;
         overflow: hidden;`
         btnShowMoreText.innerHTML = `<button class="button__read-more button__show-more-text">
-            <img class="image-expand img--rotate" src="./assets/icons/expand.svg" alt="expand" title="expand" /><b>Читать далее</b>
+            <img class="image-expand img--rotate" src="./images/expand.svg" alt="expand" title="expand" /><b>Читать далее</b>
         </button>`
         switcherContent.style.display = 'none'
     }
