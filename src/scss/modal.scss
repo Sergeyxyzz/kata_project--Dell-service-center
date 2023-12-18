@@ -1,0 +1,123 @@
+.button__show-more {
+    position: relative;
+    right: 20px;
+  }
+  /* МОДАЛКИ */
+  
+  .modal-menu {
+    transition: 1s ease-in-out;
+    box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2), -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+    min-height: 100vh;
+    position: fixed;
+    top: 0%;
+    right: -150%;
+    width: 320px;
+    background: #ffffff;
+    flex-flow: column;
+    padding: 16px;
+  
+    z-index: 100;
+    @media (width > 767px) {
+        width: 440px;
+    }
+    .header-modal-menu {
+        padding: 8px 248px 24px 0px;
+  
+        @media (width > 767px) {
+            position: absolute;
+  
+            .close-btn-menu {
+                position: relative;
+                right: 80px;
+                top: 15px;
+            }
+        }
+  
+        & button {
+            & img {
+                transition: 0.2s ease-in-out;
+                &:hover {
+                    scale: 1.1;
+                    rotate: 136deg;
+                }
+            }
+        }
+    }
+  
+    .title-menu {
+        .main__title::before {
+            content: url(../images/highlight.svg);
+            position: relative;
+            float: left;
+            right: 16px;
+        }
+    }
+  
+    .form {
+        display: flex;
+        flex-flow: column;
+        gap: 16px;
+        .form__input {
+            width: 100%;
+            height: 48px;
+            flex-shrink: 0;
+            border-radius: 8px;
+            border: 1px solid #eaeaea;
+            background: #fff;
+            text-indent: 16px;
+        }
+        .form__area {
+            padding-top: 16px;
+            width: 100%;
+            height: 118px;
+            flex-shrink: 0;
+            text-indent: 16px;
+            border-radius: 8px;
+            border: 1px solid #eaeaea;
+            background: #fff;
+        }
+    }
+  }
+  
+  .form__button {
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    background: #ff3e79;
+    width: 136px;
+    height: 32px;
+    vertical-align: middle;
+    align-self: flex-end;
+    margin-right: 20px;
+  
+    &:hover {
+        & img {
+            rotate: 180deg;
+        }
+  
+        & p {
+            scale: 1.1;
+        }
+    }
+  
+    & p {
+        transition: 0.2s ease-in-out;
+        align-self: center;
+        color: #fff;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px; /* 200% */
+        letter-spacing: -0.15px;
+        text-transform: uppercase;
+    }
+  
+    & img {
+        transition: 0.2s ease-in-out;
+        align-self: center;
+        width: 27.4px;
+        height: 24px;
+        position: relative;
+        left: 10px;
+    }
+  }
