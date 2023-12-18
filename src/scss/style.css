@@ -2,7 +2,7 @@
 .nav--animation .nav-list__item a:hover {
   position: relative;
   left: 5px;
-  text-shadow: -5px 5px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: -5px 5px 4px var(--color-black-opacity-03);
   transition: 0.1s ease-in-out;
   transform: scale(1.5);
 }
@@ -23,26 +23,16 @@
   text-shadow: none !important;
 }
 
-/* конец анимаций ссылок в бургере */
-/* бургер-меню */
 .burger-menu {
-  /* общие стили бургера*/
-  box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2), -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+  box-shadow: 16px 0px 52px 0px var(--color-black-opacity-02), -2px 0px 4px 0px var(--color-black-opacity-002);
   min-height: 100vh;
   max-width: 320px;
   padding-bottom: 20px;
-  background: #ffffff;
+  background: var(--color-white);
   flex-flow: column;
   justify-content: space-between;
   transition: 0.4s ease-in-out;
   display: flex;
-  /* конец общих стилей  бургера*/
-  /* хедар бургера */
-  /* конец хедера бургера */
-  /* основная навигация бургер меню список menu*/
-  /* конец основной навигации */
-  /* доп информация aside */
-  /* конец доб информации aside */
 }
 @media (width < 1441px) {
   .burger-menu {
@@ -64,7 +54,7 @@
   border-bottom: none;
   flex-flow: row;
   align-content: center;
-  background: white;
+  background: var(--color-white);
   padding: 24px;
 }
 .burger-menu .header-burger .header-nav-list li:nth-child(1) {
@@ -88,7 +78,7 @@
   right: 19px;
 }
 .burger-menu .nav-list .nav-list__link--active {
-  color: #7e7e82 !important;
+  color: var(--color-grey);
   position: relative;
   right: 5px;
 }
@@ -99,7 +89,7 @@
   right: 19px;
 }
 .burger-menu .nav-list .active-switcher {
-  color: #7e7e82 !important;
+  color: var(--color-grey) !important;
   position: relative;
   right: 5px;
 }
@@ -111,7 +101,7 @@
 .burger-menu .nav-list .nav-list__link {
   vertical-align: middle;
   text-align: left;
-  color: #1b1c21;
+  color: var(--color-black-lighter);
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -136,7 +126,7 @@
   flex-direction: column;
 }
 .burger-menu .additional-information .contacts .link-email {
-  color: #1b1c21;
+  color: var(--color-black-lighter);
   font-size: 16px;
   line-height: 24px; /* 150% */
   font-weight: 600;
@@ -149,7 +139,7 @@
 .burger-menu .additional-information .contacts .link-phone {
   padding-bottom: 8px;
   font-family: "TTLakes-Bold" !important;
-  color: #1b1c21;
+  color: var(--color-black-lighter);
   font-size: 24px;
   line-height: 32px; /* 133.333% */
   letter-spacing: -0.6px;
@@ -168,27 +158,26 @@
 .burger-menu .langs-list .lang-item {
   display: inline-block;
   padding-right: 7px;
-  color: #1b1c21;
+  color: var(--color-black-lighter);
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
-  line-height: 24px; /* 150% */
+  line-height: 24px;
   letter-spacing: -0.2px;
 }
 .burger-menu .langs-list .lang-item :hover {
-  border-bottom: 0.5px solid black;
+  border-bottom: 0.5px solid var(--color-black);
   transform: scale(1.1);
 }
 .burger-menu .langs-list .lang-item--active {
-  color: #7e7e82;
+  color: var(--color-grey);
 }
 .burger-menu .langs-list .lang-item--active :hover {
   border-bottom: none !important;
   transform: none !important;
-  color: green;
+  color: var(--color-green);
 }
 
-/* конец бургер меню */
 @font-face {
   font-weight: 100;
   font-family: TTLakes-Light;
@@ -208,10 +197,10 @@
 }
 
 .main__title {
-  color: #1b1c21;
+  color: var(--color-black-lighter);
   font-size: 28px;
   font-weight: 700;
-  line-height: 40px; /* 142.857% */
+  line-height: 40px;
   letter-spacing: -0.6px;
 }
 
@@ -221,9 +210,9 @@
 }
 
 .header {
-  background: #ffffff;
+  background: var(--color-white);
   min-width: 100%;
-  border-bottom: 1px solid #d9fff5;
+  border-bottom: 1px solid var(--color-border-topnbottom);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -242,7 +231,6 @@
   padding-right: 16px;
 }
 
-/* отключение блоков под дисплеи */
 @media (width > 1439px) {
   .header {
     display: none;
@@ -259,8 +247,6 @@
     display: none;
   }
 }
-/* конец блока отключения */
-/* базовые правила*/
 html,
 body,
 ul,
@@ -278,12 +264,12 @@ h1 {
 }
 
 h2 {
-  color: #1b1c21;
+  color: var(--color-black-lighter);
   font-family: "TTLakes-Light";
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
-  line-height: 24px; /* 150% */
+  line-height: 24px;
   letter-spacing: -0.2px;
 }
 
@@ -313,8 +299,6 @@ fieldset {
   border: none;
 }
 
-/* конец базовых правил */
-/* разделитель хедера */
 .wrap-delimiter {
   display: flex;
   flex-flow: row;
@@ -339,7 +323,7 @@ fieldset {
   float: left;
   position: relative;
   padding-left: 24px;
-  border-left: 2px solid #eaeaea;
+  border-left: 2px solid var(--color-white-darker-2);
   height: 40px;
   cursor: auto;
 }
@@ -349,7 +333,7 @@ fieldset {
     float: right;
     position: relative;
     padding-right: 24px;
-    border-right: 2px solid #eaeaea;
+    border-right: 2px solid var(--color-white-darker-2);
     height: 40px;
     cursor: auto;
   }
@@ -360,7 +344,6 @@ fieldset {
   display: flex;
 }
 
-/* конец разделителя */
 .button__read-more {
   display: flex;
   align-items: center;
@@ -398,7 +381,7 @@ fieldset {
 }
 
 .main {
-  background: #f8f8f8;
+  background: var(--color-white-darker);
 }
 .main .nav-list {
   position: relative;
@@ -422,7 +405,7 @@ fieldset {
   font-style: normal;
   font-weight: 500;
   text-align: center;
-  color: #7e7e82;
+  color: var(--color-grey);
   width: 100%;
   padding-left: 10px;
 }
@@ -443,8 +426,8 @@ fieldset {
 }
 .main .nav-list .nav-list__link--active {
   border-radius: 6px;
-  border: 2px solid #b8ffec;
-  background: #fff;
+  border: 2px solid var(--color-light-green);
+  background: var(--color-white);
   padding: 10px;
 }
 .main .title {
@@ -500,11 +483,11 @@ fieldset {
   height: auto;
   max-width: 90%;
   padding: 0px 16px 16px 16px;
-  color: #1b1c21;
+  color: var(--color-black-lighter);
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 18px; /* 128.571% */
+  line-height: 18px;
   letter-spacing: 0.2px;
 }
 .main .main-content .main-content__image {
@@ -538,7 +521,7 @@ fieldset {
 @media (width > 1439px) {
   .main .main-content {
     min-height: 325px;
-    background: #f8f8f8;
+    background: var(--color-white-darker);
   }
   .main .main-content .button__read-more {
     display: none;
@@ -561,15 +544,15 @@ fieldset {
 }
 
 .footer {
-  border-top: 1px solid #d9fff5;
+  border-top: 1px solid var(--color-border-topnbottom);
   padding: 12px;
-  color: #7e7e82;
+  color: var(--color-grey);
   text-align: center;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  line-height: 16px; /* 114.286% */
-  background: #F8F8F8;
+  line-height: 16px;
+  background: var(--color-white-darker);
 }
 @media (width > 767px) {
   .footer {
@@ -593,16 +576,15 @@ fieldset {
   right: 20px;
 }
 
-/* МОДАЛКИ */
 .modal-menu {
   transition: 1s ease-in-out;
-  box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2), -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+  box-shadow: 16px 0px 52px 0px var(--color-black-opacity-02), -2px 0px 4px 0px var(--color-black-opacity-002);
   min-height: 100vh;
   position: fixed;
   top: 0%;
   right: -150%;
   width: 320px;
-  background: #ffffff;
+  background: var(--color-white);
   flex-flow: column;
   padding: 16px;
   z-index: 100;
@@ -648,8 +630,8 @@ fieldset {
   height: 48px;
   flex-shrink: 0;
   border-radius: 8px;
-  border: 1px solid #eaeaea;
-  background: #fff;
+  border: 1px solid var(--color-white-darker-2);
+  background: var(--color-white);
   text-indent: 16px;
 }
 .modal-menu .form .form__area {
@@ -659,15 +641,15 @@ fieldset {
   flex-shrink: 0;
   text-indent: 16px;
   border-radius: 8px;
-  border: 1px solid #eaeaea;
-  background: #fff;
+  border: 1px solid var(--color-white-darker-2);
+  background: var(--color-white);
 }
 
 .form__button {
   border-radius: 16px;
   display: flex;
   justify-content: center;
-  background: #ff3e79;
+  background: var(--color-light-red);
   width: 136px;
   height: 32px;
   vertical-align: middle;
@@ -683,11 +665,11 @@ fieldset {
 .form__button p {
   transition: 0.2s ease-in-out;
   align-self: center;
-  color: #fff;
+  color: var(--color-white);
   font-size: 12px;
   font-style: normal;
   font-weight: 700;
-  line-height: 24px; /* 200% */
+  line-height: 24px;
   letter-spacing: -0.15px;
   text-transform: uppercase;
 }
@@ -701,22 +683,22 @@ fieldset {
 }
 
 .header-mobile {
-  background: linear-gradient(270deg, #f8f8f8 0%, #fff 98.61%);
+  background: linear-gradient(270deg, var(--color-white-darker) 0%, var(--color-white) 98.61%);
   min-width: 100%;
   justify-content: start;
   vertical-align: middle;
-  border-top: 1px solid #d9fff5;
+  border-top: 1px solid var(--color-border-topnbottom);
 }
 .header-mobile h2 {
-  color: #7e7e82;
+  color: var(--color-grey);
 }
 
 .header-tablet {
-  border-top: 1px solid #d9fff5;
+  border-top: 1px solid var(--color-border-topnbottom);
 }
 .header-tablet h2 {
   padding-left: 24px;
-  color: #7e7e82;
+  color: var(--color-grey);
 }
 
 @media (width > 767px) {
@@ -725,7 +707,7 @@ fieldset {
     position: relative;
     height: 56px !important;
     position: relative;
-    background: linear-gradient(90deg, #f8f8f8 1.39%, #fff 100%);
+    background: linear-gradient(90deg, var(--color-white-darker) 1.39%, var(--color-white) 100%);
   }
 }
 .wrap-border {
@@ -734,8 +716,8 @@ fieldset {
   justify-content: space-between;
   display: inline-flex;
   border-radius: 6px;
-  border: 1px solid #eaeaea;
-  background: #fff;
+  border: 1px solid var(--color-white-darker);
+  background: var(--color-white);
   min-width: 87%;
   height: 72px;
 }
@@ -762,7 +744,7 @@ fieldset {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  background: linear-gradient(270deg, #f8f8f8 0%, #fff 98.61%);
+  background: linear-gradient(var(--color-white-darker) 0%, var(--color-white) 98.61%);
 }
 
 .swiper-pagination {
@@ -772,7 +754,7 @@ fieldset {
 }
 
 .swiper-pagination-bullet-active {
-  background: #838385;
+  background: var(--color-grey-greyer);
 }
 
 .tablet-screen {
@@ -780,7 +762,7 @@ fieldset {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  background: #f8f8f8;
+  background: var(--color-white-darker);
   overflow-x: hidden;
 }
 .tablet-screen .main-content {
@@ -829,11 +811,11 @@ fieldset {
 
 .swiper-three__header-list {
   display: flex;
-  color: #7e7e82;
+  color: var(--color-grey);
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  line-height: 16px; /* 114.286% */
+  line-height: 16px;
   opacity: 0.7218;
 }
 @media (width < 768px) {
@@ -875,18 +857,18 @@ fieldset {
 }
 @media (width > 767px) {
   .wrap-border--slider-three {
-    color: #1b1c21;
+    color: var(--color-black-lighter);
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    line-height: 18px; /* 128.571% */
+    line-height: 18px;
     letter-spacing: 0.2px;
-    background: white;
+    background: var(--color-white);
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid #eaeaea;
+    border-bottom: 1px solid var(--color-white-darker);
     width: 100%;
-    background: rgb(255, 255, 255);
+    background: var(--color-white);
     margin-left: 2%;
     padding: 12px;
     display: flex;
@@ -910,7 +892,7 @@ fieldset {
 @media (width > 1439px) {
   .wrap-border--slider-three {
     width: 1080px;
-    background: rgb(255, 255, 255);
+    background: var(--color-white);
     margin-left: 8px;
     padding: 12px;
     display: flex;
@@ -934,27 +916,30 @@ fieldset {
   }
 }
 .wrap-border--slider-three h4 {
-  color: #7e7e82;
+  color: var(--color-grey);
   font-size: 14px;
   font-style: normal;
   font-family: "TTLakes-Bold";
   font-weight: 500;
-  line-height: 0px; /* 114.286% */
+  line-height: 0px;
 }
 .wrap-border--slider-three p {
-  color: #1b1c21;
+  color: var(--color-black-lighter);
   font-size: 14px;
   font-family: "TTLakes-Light";
   font-style: normal;
   font-weight: 400;
-  line-height: 16 px; /* 128.571% */
+  line-height: 16 px;
+}
+.wrap-border--slider-three button p {
+  color: var(--color-white);
 }
 @media (width < 767px) {
   .wrap-border--slider-three {
-    border: 1px solid #eaeaea;
+    border: 1px solid var(--color-white-darker);
     border-radius: 6px;
     padding: 0 12px;
-    background: #fff;
+    background: var(--color-white);
     display: flex;
     width: 87%;
     height: auto;
@@ -964,7 +949,7 @@ fieldset {
     transition: 0.2s ease-in-out;
   }
   .wrap-border--slider-three:hover {
-    background: rgb(255, 225, 225);
+    background: var(--color-white-2);
   }
   .wrap-border--slider-three .group-text-button {
     width: 100%;
@@ -994,7 +979,7 @@ fieldset {
     content: "Ремонтные услуги";
     position: relative;
     bottom: 95px;
-    color: #7e7e82;
+    color: var(--color-grey);
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
@@ -1005,7 +990,7 @@ fieldset {
     content: "Цена";
     position: relative;
     bottom: 90px;
-    color: #7e7e82;
+    color: var(--color-grey);
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
@@ -1016,7 +1001,7 @@ fieldset {
     content: "Срок";
     position: relative;
     bottom: 90px;
-    color: #7e7e82;
+    color: var(--color-grey);
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
@@ -1070,7 +1055,7 @@ fieldset {
   padding: 20px;
 }
 .content-end .content-end__p {
-  color: #1b1c21;
+  color: var(--color-black-lighter);
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -1080,12 +1065,30 @@ fieldset {
 .content-end .contend-end__a {
   display: inline-flex;
   align-items: center;
-  color: #1b1c21;
+  color: var(--color-black-lighter);
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: 24px; /* 150% */
   letter-spacing: -0.2px;
+}
+
+:root {
+  --color-border-topnbottom: #d9fff5;
+  --color-grey: #7e7e82;
+  --color-grey-greyer: #838385;
+  --color-white: #fff;
+  --color-white-2: rgb(255, 225, 225);
+  --color-white-darker: #f8f8f8;
+  --color-white-darker-2: #eaeaea;
+  --color-black: black;
+  --color-black-lighter: #1b1c21;
+  --color-black-opacity-03: rgba(0, 0, 0, 0.3);
+  --color-black-opacity-02: rgba(14, 24, 80, 0.2);
+  --color-black-opacity-002: rgba(69, 79, 126, 0.02);
+  --color-green: green;
+  --color-light-green: #b8ffec;
+  --color-light-red: #ff3e79;
 }
 
 /*# sourceMappingURL=style.css.map */

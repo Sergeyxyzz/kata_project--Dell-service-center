@@ -2,7 +2,7 @@
     .nav-list__item a:hover {
         position: relative;
         left: 5px;
-        text-shadow: -5px 5px 4px rgba(0, 0, 0, 0.3);
+        text-shadow: -5px 5px 4px var(--color-black-opacity-03);
         transition: 0.1s ease-in-out;
         transform: scale(1.5);
     }
@@ -26,16 +26,12 @@
         text-shadow: none !important;
     }
   }
-  /* конец анимаций ссылок в бургере */
-  
-  /* бургер-меню */
   .burger-menu {
-    /* общие стили бургера*/
-    box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2), -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+    box-shadow: 16px 0px 52px 0px var(--color-black-opacity-02), -2px 0px 4px 0px var(--color-black-opacity-002);
     min-height: 100vh;
     max-width: 320px;
     padding-bottom: 20px;
-    background: #ffffff;
+    background: var(--color-white);
     flex-flow: column;
     justify-content: space-between;
     transition: 0.4s ease-in-out;
@@ -53,9 +49,7 @@
             transform: scale(1.1);
         }
     }
-    /* конец общих стилей  бургера*/
-  
-    /* хедар бургера */
+
     .header-burger {
         display: flex;
         max-width: 272px;
@@ -63,7 +57,7 @@
         border-bottom: none;
         flex-flow: row;
         align-content: center;
-        background: white;
+        background: var(--color-white);
         padding: 24px;
   
         .header-nav-list {
@@ -75,9 +69,7 @@
             }
         }
     }
-    /* конец хедера бургера */
-  
-    /* основная навигация бургер меню список menu*/
+
     .nav-list {
         display: table-row;
         position: relative;
@@ -95,7 +87,7 @@
         }
   
         .nav-list__link--active {
-            color: #7e7e82 !important;
+            color: var(--color-grey);
             position: relative;
             right: 5px;
         }
@@ -108,7 +100,7 @@
         }
   
         .active-switcher {
-            color: #7e7e82 !important;
+            color: var(--color-grey) !important;
             position: relative;
             right: 5px;
         }
@@ -122,7 +114,7 @@
         .nav-list__link {
             vertical-align: middle;
             text-align: left;
-            color: #1b1c21;
+            color: var(--color-black-lighter);
             font-size: 16px;
             font-style: normal;
             font-weight: 700;
@@ -130,9 +122,7 @@
             letter-spacing: -0.2px;
         }
     }
-    /* конец основной навигации */
-  
-    /* доп информация aside */
+
     .additional-information {
         position: relative;
         top: 0%;
@@ -153,7 +143,7 @@
             flex-direction: column;
   
             .link-email {
-                color: #1b1c21;
+                color: var(--color-black-lighter);
                 font-size: 16px;
                 line-height: 24px; /* 150% */
                 font-weight: 600;
@@ -168,7 +158,7 @@
             .link-phone {
                 padding-bottom: 8px;
                 font-family: 'TTLakes-Bold' !important;
-                color: #1b1c21;
+                color: var(--color-black-lighter);
                 font-size: 24px;
                 line-height: 32px; /* 133.333% */
                 letter-spacing: -0.6px;
@@ -188,29 +178,29 @@
         .lang-item {
             display: inline-block;
             padding-right: 7px;
-            color: #1b1c21;
+            color: var(--color-black-lighter);
             font-size: 16px;
             font-style: normal;
             font-weight: 700;
-            line-height: 24px; /* 150% */
+            line-height: 24px; 
             letter-spacing: -0.2px;
   
             :hover {
-                border-bottom: 0.5px solid black;
+                border-bottom: 0.5px solid var(--color-black);
                 transform: scale(1.1);
             }
         }
   
         .lang-item--active {
-            color: #7e7e82;
+            color: var(--color-grey);
   
             :hover {
                 border-bottom: none !important;
                 transform: none !important;
-                color: green;
+                color: var(--color-green);
             }
         }
     }
-    /* конец доб информации aside */
   }
-  /* конец бургер меню */
+
+

@@ -1,19 +1,19 @@
 .header-mobile {
-    background: linear-gradient(270deg, #f8f8f8 0%, #fff 98.61%);
+    background: linear-gradient(270deg, var(--color-white-darker) 0%, var(--color-white) 98.61%);
     min-width: 100%;
     justify-content: start;
     vertical-align: middle;
-    border-top: 1px solid #d9fff5;
+    border-top: 1px solid var(--color-border-topnbottom);
   
     & h2 {
-        color: #7e7e82;
+        color: var(--color-grey);
     }
   }
   .header-tablet {
-    border-top: 1px solid #d9fff5;
+    border-top: 1px solid var(--color-border-topnbottom);
     & h2 {
         padding-left: 24px;
-        color: #7e7e82;
+        color: var(--color-grey);
     }
   }
   
@@ -23,7 +23,7 @@
         position: relative;
         height: 56px !important;
         position: relative;
-        background: linear-gradient(90deg, #f8f8f8 1.39%, #fff 100%);
+        background: linear-gradient(90deg, var(--color-white-darker) 1.39%, var(--color-white) 100%);
     }
   }
   .wrap-border {
@@ -32,8 +32,8 @@
     justify-content: space-between;
     display: inline-flex;
     border-radius: 6px;
-    border: 1px solid #eaeaea;
-    background: #fff;
+    border: 1px solid var(--color-white-darker);
+    background: var(--color-white);
     min-width: 87%;
     height: 72px;
     & img:last-child {
@@ -65,7 +65,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    background: linear-gradient(270deg, #f8f8f8 0%, #fff 98.61%);
+    background: linear-gradient(var(--color-white-darker) 0%, var(--color-white) 98.61%);
   }
   
   .swiper-pagination {
@@ -75,7 +75,7 @@
   }
   
   .swiper-pagination-bullet-active {
-    background: #838385;
+    background: var(--color-grey-greyer);
   }
   
   .tablet-screen {
@@ -83,7 +83,7 @@
     display: flex;
     flex-direction: column;
     min-height: 100%;
-    background: #f8f8f8;
+    background: var(--color-white-darker);
     overflow-x: hidden;
     .main-content {
         position: relative;
@@ -136,11 +136,11 @@
   
   .swiper-three__header-list {
     display: flex;
-    color: #7e7e82;
+    color: var(--color-grey);
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
-    line-height: 16px; /* 114.286% */
+    line-height: 16px; 
     opacity: 0.7218;
     @media (width < 768px) {
         display: none;
@@ -182,18 +182,18 @@
   
   .wrap-border--slider-three {
     @media (width > 767px) {
-        color: #1b1c21;
+        color: var(--color-black-lighter);
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
-        line-height: 18px; /* 128.571% */
+        line-height: 18px; 
         letter-spacing: 0.2px;
-        background: white;
+        background: var(--color-white);
         display: flex;
         justify-content: space-between;
-        border-bottom: 1px solid #eaeaea;
+        border-bottom: 1px solid var(--color-white-darker);
         width: 100%;
-        background: rgb(255, 255, 255);
+        background: var(--color-white);
         margin-left: 2%;
         padding: 12px;
         display: flex;
@@ -236,7 +236,7 @@
             }
         }
         width: 1080px;
-        background: rgb(255, 255, 255);
+        background: var(--color-white);
         margin-left: 8px;
         padding: 12px;
         display: flex;
@@ -244,28 +244,34 @@
     }
   
     & h4 {
-        color: #7e7e82;
+        color: var(--color-grey);
         font-size: 14px;
         font-style: normal;
         font-family: 'TTLakes-Bold';
         font-weight: 500;
-        line-height: 0px; /* 114.286% */
+        line-height: 0px; 
     }
   
     & p {
-        color: #1b1c21;
+        color: var(--color-black-lighter);
         font-size: 14px;
         font-family: 'TTLakes-Light';
         font-style: normal;
         font-weight: 400;
-        line-height: 16 px; /* 128.571% */
+        line-height: 16 px; 
+    }
+
+    & button {
+        & p {
+            color: var(--color-white);
+        }
     }
   
     @media (width < 767px) {
-        border: 1px solid #eaeaea;
+        border: 1px solid var(--color-white-darker);
         border-radius: 6px;
         padding: 0 12px;
-        background: #fff;
+        background: var(--color-white);
         display: flex;
         width: 87%;
         height: auto;
@@ -275,7 +281,7 @@
         transition: 0.2s ease-in-out;
   
         &:hover {
-            background: rgb(255, 225, 225);
+            background: var(--color-white-2);
         }
   
         .group-text-button {
@@ -312,7 +318,7 @@
         content: 'Ремонтные услуги';
         position: relative;
         bottom: 95px;
-        color: #7e7e82;
+        color: var(--color-grey);
         font-size: 14px;
         font-style: normal;
         font-weight: 500;
@@ -323,7 +329,7 @@
         content: 'Цена';
         position: relative;
         bottom: 90px;
-        color: #7e7e82;
+        color: var(--color-grey);
         font-size: 14px;
         font-style: normal;
         font-weight: 500;
@@ -334,7 +340,7 @@
         content: 'Срок';
         position: relative;
         bottom: 90px;
-        color: #7e7e82;
+        color: var(--color-grey);
         font-size: 14px;
         font-style: normal;
         font-weight: 500;
@@ -397,7 +403,7 @@
     padding: 20px;
   
     .content-end__p {
-        color: #1b1c21;
+        color: var(--color-black-lighter);
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
@@ -408,7 +414,7 @@
     .contend-end__a {
         display: inline-flex;
         align-items: center;
-        color: #1b1c21;
+        color: var(--color-black-lighter);
         font-size: 16px;
         font-style: normal;
         font-weight: 500;

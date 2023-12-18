@@ -65,7 +65,6 @@ const showSliderContent = () => {
         }
     }
 }
-console.log(document.querySelectorAll('.view-window-only').length)
 
 const showSliderContent2 = () => {
     for (let i = 3; i < 6; i++) {
@@ -143,12 +142,7 @@ if (innerWidth < 1440) {
     )
 }
 
-for (let i = 0; i < langItem.length; i++) {
-    langItem[i].addEventListener('click', function () {
-        let current = document.querySelectorAll('.lang-item--active')
-        current[0].className = current[0].className.replace(' lang-item--active', '')
-    })
-}
+
 // end burger-menu
 
 // modal-form-menu
@@ -213,6 +207,7 @@ for (let i = 0; i < headerLinks.length; i++) {
         this.className += ' nav-list__link--active'
     })
 }
+
 // end change active-class in links
 
 // menu big screen formatter
@@ -262,3 +257,13 @@ btnShowMoreText.addEventListener('click', () => {
     }
 })
 // end close/open "read-more" main text content
+
+// langs active
+for (let i = 0; i < langItem.length; i++) {
+    langItem[i].addEventListener('click', function () {
+        let current = document.querySelectorAll('.lang-item--active')
+        current[0].className = current[0].className.replace(' lang-item--active', '')
+        this.className += ' lang-item--active'
+    })
+}
+// end langs
