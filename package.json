@@ -16,6 +16,7 @@
   },
   "scripts": {
     "start": "webpack serve",
+    "deploy": "gh-pages -d dist",
     "build:dev": "webpack --env mode=development",
     "build:prod": "webpack --env mode=production"
   },
