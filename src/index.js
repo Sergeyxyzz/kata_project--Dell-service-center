@@ -1,3 +1,4 @@
+import './scss/index.scss'
 let pageWidth = document.documentElement.scrollWidth
 
 // swiper
@@ -28,7 +29,7 @@ if (pageWidth >= 768) {
             elem.classList.add('view-window-only')
         }
     })
-    window.addEventListener('resize', (e) => {
+    window.addEventListener('resize', () => {
         if (innerWidth <= 768) {
             document.querySelectorAll('.wrap-border').forEach((elem) => (elem.style.cssText = `width: 85vw;`))
         } else {
@@ -141,8 +142,6 @@ if (innerWidth < 1440) {
         { capture: true }
     )
 }
-
-
 // end burger-menu
 
 // modal-form-menu
@@ -207,7 +206,6 @@ for (let i = 0; i < headerLinks.length; i++) {
         this.className += ' nav-list__link--active'
     })
 }
-
 // end change active-class in links
 
 // menu big screen formatter
