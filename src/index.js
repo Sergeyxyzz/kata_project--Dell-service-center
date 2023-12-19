@@ -121,8 +121,6 @@ const closeBurger = () => {
         top: 0%;
         z-index: 100;
         `
-        mainContent.style.cssText = `opacity: 1;`
-        headerContent.style.cssText = `opacity: 1;`
     }
 }
 
@@ -137,7 +135,7 @@ if (innerWidth < 1440) {
 
             if (!click) {
                 closeBurger()
-            }
+            } 
         },
         { capture: true }
     )
@@ -174,8 +172,9 @@ document.addEventListener(
     'click',
     (e) => {
         const click = e.composedPath().includes(modalMenu)
+        const click2 = e.composedPath().includes(burgerMenu)
 
-        if (!click) {
+        if (!click && !click2) {
             closeModalMenu()
         }
     },
