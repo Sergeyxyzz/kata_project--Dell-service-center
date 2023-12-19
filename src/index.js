@@ -170,6 +170,18 @@ const closeModalMenu = () => {
     headerContent.style.cssText = `opacity: 1;`
 }
 
+document.addEventListener(
+    'click',
+    (e) => {
+        const click = e.composedPath().includes(modalMenu)
+
+        if (!click) {
+            closeModalMenu()
+        }
+    },
+    { capture: true }
+)
+
 buttonChat.forEach((elem) => {
     elem.addEventListener('click', (e) => {
         if (e.currentTarget === elem) {
